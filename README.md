@@ -7,7 +7,7 @@
 ## フィボナッチ数列の一般項は以下のような感じ
 ![fibonaccinumbers-def](https://user-images.githubusercontent.com/77597098/208242271-1ef058ff-6115-49b1-94be-45803aa596e5.png)
 
-### 処理時間長い？
+### 処理時間長い
 ```
 function fib(n){
     if(n < 2){
@@ -18,9 +18,11 @@ function fib(n){
 }
 ```
 
-### 処理時間早い？
+### 処理時間早い
 <p>計算したもので、次の数を表示していく。</p>
+
 ```
+// a = fib(1) , b= fib(2) , c = fib(3)
 function fib(n){
     let a = 1;
     let b = 1;
@@ -31,5 +33,4 @@ function fib(n){
     }
     return b;
 }
-a = fib(1) , b= fib(2) , c = fib(3)
 ```
