@@ -14,9 +14,9 @@ function fib(n){
     return b;
 }
 
-
-app.get("/", (req, res) => {
-    var result = fib(100);
-    console.log(result);
-    res.send("ウェブAPIをはやしていく");
+// http://example.com/fib?N=99
+app.get("/fib", (req, res) => {
+    // var result = fib(100);
+    // console.log(result);
+    res.json({ result: fib(req.query.n) });
 });
