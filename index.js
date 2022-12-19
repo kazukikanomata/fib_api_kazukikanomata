@@ -17,31 +17,31 @@ function fib(n){
 }
 
 // 文字かどうかを判定
-function isString(n){
-    if (typeof n === "string" || n instanceof String){
-        // 文字列です
-        return true;
-    } else {
-        // 文字列ではない
-        return false;
-    }
-}
+// function isNaN(n){
+//     if (typeof n !== "string" || n === ""){
+//         // 文字列です
+//         return true;
+//     } else {
+//         // 文字列ではない
+//         return false;
+//     }
+// }
 
 // ステイータスコードが雑なのはだるいね。
 
-// http://example.com/fib?N=99
+app.get("/", (req, res) =>{
+    return isString("ahdjkdhekk");
+});
 
 app.get("/fib", (req, res) => {
     // req.query.n → numberのこと 具体例：n=10
     const input_value = req.query.n;
-    const inputExists = isString(input_value);
-
-    // 正の数か負の数かを識別する 具体値：0 or 1 or -1
+    const inputExists = isNaN(input_value);
     const hasPositiveNumber = Math.sign(input_value);
     
     // 計算した値。
     const result = fib(input_value);
-    if (inputExists == 'true'){
+    if (inputExists == true){
         return res.status(400).json({
             "status": 400,
             "message": "数字を入力してください"
@@ -55,16 +55,18 @@ app.get("/fib", (req, res) => {
                 "result": result
             });
         //　0の時 
-        } else if (hasPositiveNumber === 0){
+        }
+        if (hasPositiveNumber === 0){
             return res.status(401).json({
                 "status": 400,
                 "message": "1以上の値を入力してください"
             });
-        } else {
+        } 
+        if(hasPositiveNumber === -1) {
             return res.status(402).json({
                 "status": 400,
                 "message": "正の数を入力してください"
             });
         }
-}
+    }
 });
