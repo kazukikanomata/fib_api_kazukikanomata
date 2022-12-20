@@ -1,6 +1,8 @@
 const express = require("express");
 const app = express();
+const router = express.Router();
 const port = 3000;
+app.use('/', router);
 app.listen(port);
 console.log("サーバーが開始されました。");
 
@@ -18,7 +20,7 @@ function fib(n){
 
 // ステイータスコードが雑なのはだるいね。
 
-app.get("/fib", (req, res) => {
+router.get("/fib", (req, res) => {
     const input_value = req.query.n;
     const inputExists = isNaN(input_value);
     const hasPositiveNumber = Math.sign(input_value);
