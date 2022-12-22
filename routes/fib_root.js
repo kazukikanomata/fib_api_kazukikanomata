@@ -2,6 +2,9 @@ const express = require("express");
 const router = express.Router();
 
 const { fib } = require("../fib");
+router.get("/", () =>{
+    <h1>Hello World!</h1>
+});
 
 router.get("/fib", (req, res) => {
     const input_value = req.query.n;
