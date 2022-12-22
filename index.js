@@ -4,6 +4,6 @@ const router = require('./routes/fib_root');
 const port = process.env.PORT || 3000;
 
 app.use('/', router);
-app.listen(PORT);
+app.listen(port);
 
 console.log("サーバーが開始されました。");
