@@ -3,7 +3,7 @@ const router = express.Router();
 
 const { fib } = require("../fib");
 router.get("/", () =>{
-    <h1>Hello World!</h1>
+    console.log("Hello World!");
 });
 
 router.get("/fib", (req, res) => {
