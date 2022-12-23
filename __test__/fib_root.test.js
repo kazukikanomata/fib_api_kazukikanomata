@@ -1,8 +1,7 @@
+const request = require('supertest');
+const assert = require('assert');
 const express = require("express");
 const app = express();
-const { fib } = require("../fib");
-const fib_router = require("../routes/fib_root");
-const request = require('supertest');
 
 describe("Test", () =>{
     test('-1が代入されたら数字を入力してくださいと、400statusを返却する', () =>{
