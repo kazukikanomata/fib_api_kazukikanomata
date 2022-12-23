@@ -34,3 +34,5 @@ function fib(n){
     return b;
 }
 ```
+### デプロイ
+URL: https://fib-api-kazukikanomata.herokuapp.com/
