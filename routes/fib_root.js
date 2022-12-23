@@ -2,8 +2,9 @@ const express = require("express");
 const router = express.Router();
 
 const { fib } = require("../fib");
-router.get("/", () =>{
-    console.log("Hello World!");
+
+router.get("/", (req, res) =>{
+    res.send("Hello World!");
 });
 
 router.get("/fib", (req, res) => {
