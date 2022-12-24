@@ -34,6 +34,10 @@ function fib(n){
     return b;
 }
 ```
+### 処理フローチャート
+![flowchart_api_fib drawio](https://user-images.githubusercontent.com/77597098/209429707-d77f814c-cbb0-46b4-97dd-bb467cdcc361.png)
+
+
 ### 要求仕様をテーブルに起こしてみた
 <p>ブラックボックステストを中心に、同値分析法・境界値分析法を意識し表を作成</p>
 
